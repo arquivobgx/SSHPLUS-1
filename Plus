@@ -60,15 +60,7 @@ rm alfainternet > /dev/null 2>&1
 cd /bin/ > /dev/null 2>&1
 rm v2raymanager > /dev/null 2>&1
 wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Modulos/v2raymanager > /dev/null 2>&1
-rm chuser > /dev/null 2>&1
-wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/chuser > /dev/null 2>&1
-rm userscheck > /dev/null 2>&1
-wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/user/userscheck > /dev/null 2>&1
-chmod 777 chuser > /dev/null 2>&1
-chmod 777 userscheck > /dev/null 2>&1
-rm checkuser.py > /dev/null 2>&1
-wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/checkuser.py > /dev/null 2>&1
-chmod 777 checkuser.py > /dev/null 2>&1
+
 #-----------------------------------------------------------------------------------------------------------------
 echo -e "\n\033[1;32mKEY VALIDA!\033[1;32m"
 sleep 1s
