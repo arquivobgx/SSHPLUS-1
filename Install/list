@@ -27,17 +27,30 @@ grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tm
 echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
 _dir1='/bin'
 _dir2='/etc/SSHPlus'
+_dir3='/dev'
 rm $_dir2/cabecalho $_dir2/open.py $_dir2/proxy.py $_dir2/wsproxy.py >/dev/null 2>&1
 _mdls=("addhost" "delhost" "alterarsenha" "criarusuario" "expcleaner" "mudardata" "remover" "criarteste" "droplimiter" "alterarlimite" "ajuda" "sshmonitor" "badvpn" "userbackup" "instsqd" "blockt" "otimizar" "menu" "speedtest" "banner" "senharoot" "reiniciarservicos" "reiniciarsistema" "attscript" "conexao" "delscript" "detalhes" "infousers" "verifatt" "limiter" "uexpired" "cabecalho" "open.py" "slow_dns" "userscheck" "checkuser.py" "proxy.py" "wsproxy.py" "trojan-go" "chuser" "swapmemory")
 for _arq in ${_mdls[@]}; do
 	[[ -e $_dir1/$_arq ]] && rm $_dir1/$_arq >/dev/null 2>&1
 	wget -c -P $_dir1 https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Modulos/$_arq
 	chmod +x $_dir1/$_arq
-	wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/chuser > /dev/null 2>&1
-	wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/user/userscheck > /dev/null 2>&1
-	wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/checkuser.py > /dev/null 2>&1
+	apt-get install figlet -y > /dev/null 2>&1
+pip3 install flask > /dev/null 2>&1
+rm /bin/chuser > /dev/null 2>&1
+sleep 5
+cd /bin || exit
+wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/chuser > /dev/null 2>&1
+wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/user/userscheck > /dev/null 2>&1
 chmod 777 chuser > /dev/null 2>&1
 chmod 777 userscheck > /dev/null 2>&1
+clear
+mkdir /etc/rec > /dev/null 2>&1
+echo -e 'By: @ALFAINTERNET' > /etc/rec/licence
+echo -e 'By: @ALFAINTERNET' > /usr/lib/licence
+mkdir /usr/lib/checkuser > /dev/null 2>&1
+cd /usr/lib/checkuser || exit
+rm checkuser.py > /dev/null 2>&1
+wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/checkuser.py > /dev/null 2>&1
 chmod 777 checkuser.py > /dev/null 2>&1
 done
 mv $_dir1/cabecalho $_dir1/bot $_dir1/open.py $_dir1/proxy.py $_dir1/wsproxy.py $_dir2
