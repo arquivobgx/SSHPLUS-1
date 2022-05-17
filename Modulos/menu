@@ -423,11 +423,9 @@ case "$x" in
    ;;
    22)
    instcheck
-   exit;
    ;;
    23)
    chuser
-   exit;
    ;;
    0 | 00)
    echo -e "\033[1;31mSaindo...\033[0m"
