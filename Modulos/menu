@@ -115,6 +115,8 @@ function limit2 () {
 function limit_ssh () {
 [[ $(ps x | grep "limiter"|grep -v grep |wc -l) = '0' ]] && limit1 || limit2
 }
+#instcheck
+}
 ##
 function autoexec () {
    if grep "menu;" /etc/profile > /dev/null; then
