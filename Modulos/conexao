@@ -503,7 +503,6 @@ echo ""
 echo -e "\033[1;33m MAIS INFORMAÇÕES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@ALFAINTERNET\033[0m"
 cat /dev/null > ~/.bash_history && history -c
 exit
-            fi
         }
     	fun_chisel() {
 		clear
