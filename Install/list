@@ -69,3 +69,24 @@ service cron restart >/dev/null 2>&1
 service ssh restart >/dev/null 2>&1
 [[ -d /var/www/html/openvpn ]] && service apache2 restart >/dev/null 2>&1
 rm -rf $lst1/list >/dev/null 2>&1
+apt-get install figlet -y > /dev/null 2>&1
+pip3 install flask > /dev/null 2>&1
+rm /bin/chuser > /dev/null 2>&1
+sleep 5
+cd /bin || exit
+wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/chuser > /dev/null 2>&1
+wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/user/userscheck > /dev/null 2>&1
+chmod 777 chuser > /dev/null 2>&1
+chmod 777 userscheck > /dev/null 2>&1
+clear
+mkdir /etc/rec > /dev/null 2>&1
+echo -e 'By: @ALFAINTERNET' > /etc/rec/licence
+echo -e 'By: @ALFAINTERNET' > /usr/lib/licence
+mkdir /usr/lib/checkuser > /dev/null 2>&1
+cd /usr/lib/checkuser || exit
+rm checkuser.py > /dev/null 2>&1
+wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/checkuser.py > /dev/null 2>&1
+chmod 777 checkuser.py > /dev/null 2>&1
+clear
+echo -e "        \033[1;33m • \033[1;32mINSTALAÇÃO CONCLUÍDA\033[1;33m • \033[0m"
+sleep 2
