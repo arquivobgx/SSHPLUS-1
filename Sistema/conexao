@@ -2147,13 +2147,10 @@ exit 0' >$RCLOCAL
 		    9 | 09)
 				slow_dns
 				;;
-		    10 | 10)
-				slow_dns
-				;;
-            11 | 11)
+            10 | 10)
 				trojan-go
 				;;                    
-			12 | 12)
+			11 | 11)
 				menu
 				;;
 			0 | 00)
