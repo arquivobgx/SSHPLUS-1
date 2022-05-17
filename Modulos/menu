@@ -115,7 +115,7 @@ function limit2 () {
 function limit_ssh () {
 [[ $(ps x | grep "limiter"|grep -v grep |wc -l) = '0' ]] && limit1 || limit2
 }
-#onlineapp
+#chuser
 function onapp1 () {
    clear
    echo -e "\n\033[1;32mINICIANDO O CHECK USER... \033[0m"
@@ -452,7 +452,7 @@ case "$x" in
    exit;
    ;;
    19)
-   onapp_ssh
+   chuser
    ;;
    20)
    clear
