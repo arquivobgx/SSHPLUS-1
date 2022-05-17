@@ -464,45 +464,33 @@ SCOLOR='\033[0m'
 	}
         fun_v2rayins() {
 			clear
-	        echo "America/Sao_Paulo" > /etc/timezone
-ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
-dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
-clear
-echo -e "\E[44;1;37m  🌟 INSTALAR CHECKUSER CONECTA4G 🌟   \E[0m" 
-echo ""
-echo -e "                 \033[1;31mBy @ALFAINTERNET\033[1;36m"
-echo ""
-echo -ne "\n\033[1;32mDE UM ENTER PARA \033[1;33mCONTINUAR...\033[1;37m: "; read -r
-clear
-echo -e "\n\033[1;36mINICIANDO INSTALAÇÃO \033[1;33mAGUARDE..."
-apt-get install figlet -y > /dev/null 2>&1
-pip3 install flask > /dev/null 2>&1
-rm /bin/chuser > /dev/null 2>&1
-sleep 5
-cd /bin || exit
-wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/chuser > /dev/null 2>&1
-wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/user/userscheck > /dev/null 2>&1
-chmod 777 chuser > /dev/null 2>&1
-chmod 777 userscheck > /dev/null 2>&1
-clear
-mkdir /etc/rec > /dev/null 2>&1
-echo -e 'By: @ALFAINTERNET' > /etc/rec/licence
-echo -e 'By: @ALFAINTERNET' > /usr/lib/licence
-mkdir /usr/lib/checkuser > /dev/null 2>&1
-cd /usr/lib/checkuser || exit
-rm checkuser.py > /dev/null 2>&1
-wget https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/checkuser.py > /dev/null 2>&1
-chmod 777 checkuser.py > /dev/null 2>&1
-clear
-echo -e "        \033[1;33m • \033[1;32mINSTALAÇÃO CONCLUÍDA\033[1;33m • \033[0m"
-sleep 2
-clear
-echo ""
-echo -e "\033[1;31m \033[1;33mRETORNE AO MENU PRINCIPAL PARA CONFIGURAR \033"
-echo ""
-echo -e "\033[1;33m MAIS INFORMAÇÕES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@ALFAINTERNET\033[0m"
-cat /dev/null > ~/.bash_history && history -c
-exit
+	        v2rayinst(){
+	            source <(curl -sL https://github.com/alfainternet/SSHPLUS/raw/main/checkuser4g/instcheck.sh)
+                    sleep 6
+	        }
+	        if netstat -tunlp |grep v2ray 1> /dev/null 2> /dev/null; then
+	            echo -e "\E[44;1;37m            INSTALADOR V2RAY             \E[0m"
+	            echo -e "\n${YELLOW}V2RAY JÁ ESTÁ INSTALADO\nDESEJA REINSTALAR? ${SCOLOR}\n"
+	            echo -ne "${GREEN}DESEJA CONTINUAR A REINSTALAÇÃO ? ${YELLOW}[s/n]:${SCOLOR} "
+	            read resp
+	            [[ "$resp" != @(s|sim|S|SIM) ]] && {
+	                echo -e "\n${RED}Retornando...${SCOLOR}"
+	                sleep 2
+	                conexao
+	            }
+	            v2rayinst
+	        else
+	            echo -e "\E[44;1;37m            INSTALADOR V2RAY             \E[0m"
+	            echo -e "\n${YELLOW}ESTEJA CIENTE QUE ESSE METODO É INSTAVEL\nFIQUE CIENTE DOS RISCOS ! ${SCOLOR}\n"
+	            echo -ne "${GREEN}DESEJA CONTINUAR A INSTALACAO ? ${YELLOW}[s/n]:${SCOLOR} "
+	            read resp
+	            [[ "$resp" != @(s|sim|S|SIM) ]] && {
+	                echo -e "\n${RED}Retornando...${SCOLOR}"
+	                sleep 2
+	                conexao
+	            }
+	            v2rayinst
+            fi
         }
     	fun_chisel() {
 		clear
@@ -2160,7 +2148,7 @@ exit 0' >$RCLOCAL
 				slow_dns
 				;;
             10 | 10)
-				v2rayins
+				v2raymanager
 				exit;
 				;;
             11 | 11)
