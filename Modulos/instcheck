@@ -33,4 +33,5 @@ clear
 echo -e "        \033[1;33m • \033[1;32mINSTALAÇÃO CONCLUÍDA\033[1;33m • \033[0m"
 sleep 2
 clear
+echo
 menu
