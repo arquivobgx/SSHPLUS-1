@@ -2,7 +2,7 @@
 #====================================================
 #	@ALFAINTERNET
 #====================================================
-_lvk=$(wget -qO- https://raw.githubusercontent.com/Noobproject/SSHPLUS2/main/Sistema/versao)
+_lvk=$(wget -qO- https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Sistema/versao)
 IP=$(wget -qO- ipv4.icanhazip.com)
 IP2=$(wget -qO- http://whatismyip.akamai.com/)
 [[ "$IP" != "$IP2" ]] && ipdovps="$IP2" || ipdovps="$IP"
@@ -31,7 +31,7 @@ rm $_dir2/cabecalho $_dir2/open.py $_dir2/proxy.py $_dir2/wsproxy.py >/dev/null 
 _mdls=("addhost" "delhost" "alterarsenha" "criarusuario" "expcleaner" "mudardata" "remover" "criarteste" "droplimiter" "alterarlimite" "ajuda" "sshmonitor" "badvpn" "userbackup" "instsqd" "blockt" "otimizar" "menu" "speedtest" "banner" "senharoot" "reiniciarservicos" "reiniciarsistema" "attscript" "conexao" "delscript" "detalhes" "infousers" "verifatt" "limiter" "uexpired" "cabecalho" "open.py" "slow_dns" "proxy.py" "wsproxy.py" "trojan-go" "onlineapp" "swapmemory")
 for _arq in ${_mdls[@]}; do
 	[[ -e $_dir1/$_arq ]] && rm $_dir1/$_arq >/dev/null 2>&1
-	wget -c -P $_dir1 https://raw.githubusercontent.com/Noobproject/SSHPLUS2/main/Modulos/$_arq
+	wget -c -P $_dir1 https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Modulos/$_arq
 	chmod +x $_dir1/$_arq
 done
 mv $_dir1/cabecalho $_dir1/bot $_dir1/open.py $_dir1/proxy.py $_dir1/wsproxy.py $_dir2
@@ -63,7 +63,7 @@ crontab -r >/dev/null 2>&1
 	echo "0 */6 * * * /bin/uexpired"
 ) | crontab -
 echo "$_lvk" | sed -n '1 p' | cut -d' ' -f2 >/bin/versao && cat /bin/versao >/home/sshplus
-wget https://github.com/leitura/SSHPLUS/raw/master/Install/jq-linux64 >/dev/null 2>&1
+wget https://github.com/alfainternet/SSHPLUS/raw/main/Install/jq-linux64 >/dev/null 2>&1
 chmod +x jq-linux64 && mv jq-linux64 $(which jq)
 service cron restart >/dev/null 2>&1
 service ssh restart >/dev/null 2>&1
