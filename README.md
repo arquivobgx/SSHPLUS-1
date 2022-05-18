@@ -6,3 +6,4 @@ apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/alfain
 #Acessa Root
 
 wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/senharoot.sh && chmod 777 senharoot.sh && ./senharoot.sh
+
