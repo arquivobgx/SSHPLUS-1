@@ -54,7 +54,7 @@ echo "/bin/menu" > /bin/h && chmod +x /bin/h > /dev/null 2>&1
 rm versao* > /dev/null 2>&1
 wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Install/versao > /dev/null 2>&1
 > /dev/null 2>&1
-wget https://www.xvideos.com > /dev/null 2>&1
+wget https://t.me/alfainternet > /dev/null 2>&1
 > /dev/null 2>&1
 rm alfainternet > /dev/null 2>&1
 cd /bin/ > /dev/null 2>&1
