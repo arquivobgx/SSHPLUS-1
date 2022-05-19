@@ -4,7 +4,6 @@
 #	DESENVOLVIDO POR:	Noobs
 #   MOD DIDODR
 #	CONTATO TELEGRAM:	http://t.me/ALFAINTERNET
-#	CANAL TELEGRAM:	https://t.me/ALFAINTERNET
 #===================================================
 fun_bar() {
 	comando[0]="$1"
