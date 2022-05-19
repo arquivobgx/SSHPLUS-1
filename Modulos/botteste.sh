@@ -1,6 +1,7 @@
 #!/bin/bash
-clear
-echo "America/Sao_Paulo" > /etc/timezone
+[[ $(screen -list| grep -c 'bot_teste') == '0' ]] && {
+    clear
+    echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
