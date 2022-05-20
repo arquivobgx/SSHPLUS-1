@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%50s%s%-20s\n' "BadVPN, created By Noob" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%50s%s%-20s\n' "BadVPN, created By Mr.Devim" ; tput sgr0
 if [ -f "/usr/local/bin/badvpn-udpgw" ]
 then
 	tput setaf 3 ; tput bold ; echo ""
@@ -47,7 +47,7 @@ if [[ "$resposta" = 's' ]]; then
     chmod +x badvpn.sh
     ./badvpn.sh
 	echo "#!/bin/bash
-	badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 512 --max-connections-for-client 8" > /bin/badudp
+	badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 10000 --max-connections-for-client 10000" > /bin/badudp
 	chmod +x /bin/badudp
 	clear
 	tput setaf 3 ; tput bold ; echo ""
