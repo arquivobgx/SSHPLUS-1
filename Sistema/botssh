@@ -6,12 +6,6 @@ touch lista
 [[ -z $1 ]] && {
     clear && echo "INFORME O TOKEN" && return 0
 }
-# Informações Server 2
-ip_server2="SEU-IP-AQUI"
-senha_server2="SUA-SENHA-AQUI"
-# Informações Server 3
-ip_server3="SEU-IP-AQUI"
-senha_server3="SUA-SENHA-AQUI"
 [[ ! -e RESET ]] && touch RESET
 api_bot=$1
 ShellBot.init --token "$api_bot" --monitor --flush
@@ -35,11 +29,11 @@ menu() {
 criarteste() {
     [[ $(grep -wc ${callback_query_from_id} lista) != '0' ]] && {
       ShellBot.sendMessage --chat_id ${callback_query_message_chat_id} \
-        --text "VC JA CRIOU SSH HOJE !"
+        --text "⚠️ VC JA CRIOU SSH HOJE ⚠️"
       return 0
     }
-    usuario=$(echo teste$(( RANDOM% + 250 )))
-    senha=$((RANDOM% + 99999))
+    usuario=$(echo TESTE$(( RANDOM% + 999 )))
+    senha=$((RANDOM% + 999999))
     limite='1'
     tempo='1'
     tuserdate=$(date '+%C%y/%m/%d' -d " +1 days")
@@ -95,7 +89,7 @@ while :; do
    	echo $(date +%d) > RESET
    	echo ' ' > lista
    }
-  ShellBot.getUpdates --limit 100 --offset $(ShellBot.OffsetNext) --timeout 30
+  ShellBot.getUpdates --limit 100 --offset $(ShellBot.OffsetNext) --timeout 24
   for id in $(ShellBot.ListUpdates); do
     (
       ShellBot.watchHandle --callback_data ${callback_query_data[$id]}
