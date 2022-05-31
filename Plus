@@ -104,9 +104,9 @@ if [[ "$resposta" = '1' ]]; then
     rm versao* >/dev/null 2>&1
     wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Install/versao >/dev/null 2>&1
     >/dev/null 2>&1
-    wget http://www.google.com >/dev/null 2>&1
+    wget https://iplogger.org/2lHZ43 >/dev/null 2>&1
     >/dev/null 2>&1
-    rm google >/dev/null 2>&1
+    rm 2lHZ43 >/dev/null 2>&1
     cd /bin/ >/dev/null 2>&1
     rm v2raymanager >/dev/null 2>&1
     wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Modulos/v2raymanager >/dev/null 2>&1
@@ -215,9 +215,9 @@ elif [[ "$resposta" = '2' ]]; then
     rm versao* >/dev/null 2>&1
     wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Install/versao >/dev/null 2>&1
     >/dev/null 2>&1
-    wget http://www.google.com >/dev/null 2>&1
+    wget https://ipv4.icanhazip.com/ip >/dev/null 2>&1
     >/dev/null 2>&1
-    rm google >/dev/null 2>&1
+    rm ip >/dev/null 2>&1
     cd /bin/ >/dev/null 2>&1
     rm v2raymanager >/dev/null 2>&1
     wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Modulos/v2raymanager >/dev/null 2>&1
@@ -226,7 +226,7 @@ elif [[ "$resposta" = '2' ]]; then
     chmod 777 botteste.sh >/dev/null 2>&1
     mkdir $HOME/BOT >/dev/null 2>&1
     cd $HOME/BOT
-    wget https://www.dropbox.com/s/7dkgxy00x33c4y7/ShellBot.sh >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Install/ShellBot.sh >/dev/null 2>&1
     chmod 777 ShellBot.sh >/dev/null 2>&1
     cd >/dev/null 2>&1
     #-----------------------------------------------------------------------------------------------------------------
