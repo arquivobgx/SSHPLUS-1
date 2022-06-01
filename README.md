@@ -13,4 +13,4 @@ wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/senharoot.sh &&
 
 
 
-# https://github.com/alfainternet/SSHPLUS/raw/main/Menu.png
+$ https://github.com/alfainternet/SSHPLUS/raw/main/Menu.png
