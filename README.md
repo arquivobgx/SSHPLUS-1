@@ -12,5 +12,3 @@ apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/alfain
 wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/senharoot.sh && chmod 777 senharoot.sh && ./senharoot.sh
 
 
-
-$ https://github.com/alfainternet/SSHPLUS/raw/main/Menu.png
