@@ -3,8 +3,8 @@
 #	@ALFAINTERNET
 #====================================================
 _lvk=$(wget -qO- https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Sistema/versao)
-IP=$(wget -qO- http://whatismyip.akamai.com/)
-IP2=$(wget -qO- http://whatismyip.akamai.com/)
+IP=$(wget -qO- ipv4.icanhazip.com)
+IP2=$(wget -qO- ipv4.icanhazip.com)
 [[ "$IP" != "$IP2" ]] && ipdovps="$IP2" || ipdovps="$IP"
 echo -e "$ipdovps" >/etc/IP
 lst=$1 && lst1=$2 && lst2=$3 && key1=$4 && key2=crz
