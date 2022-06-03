@@ -70,9 +70,9 @@ fun_atts () {
 
 } > /dev/null 2>&1
 
-echo -e "                              \033[1;31mBy ALFAINTERNET\033[1;36m"
+echo -e "                              \033[1;31mALFAINTERNET MANAGER\033[1;36m"
 
-echo -e "   SSHPlus" | figlet
+echo -e "   ALFAINTERNET" | figlet
 
 echo " "
 
@@ -132,7 +132,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
     sleep 3
 
-    wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Plus > /dev/null 2>&1
+    wget apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/alfainternet/SSHPLUS/main/Plus && chmod 777 Plus && ./Plus > /dev/null 2>&1
 
     chmod +x Plus
 
